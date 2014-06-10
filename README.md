@@ -1,6 +1,19 @@
 # JSend
 A simple PHP implementation of the [JSend specification](http://labs.omniti.com/labs/jsend).
 
+## Installation
+
+Add `"quanganhdo/jsend": "dev-master"` to `composer.json`'s `require` list.
+
+Add the followings to the `repositories` list in the same file:
+
+```
+{
+    "type": "vcs",
+    "url": "git@github.com:quanganhdo/JSend.git"
+}
+```
+
 ## Usage
 ```php
 use JSend\JSendResponse;
@@ -65,6 +78,8 @@ if ($response->isError()) {
 }
 ```
 
+## Laravel Service Provider
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shkm/jsend/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Add `JSend\Laravel\JSendServiceProvider` to the `providers` array in `app/config/app.php`. 
 
+Add `JSendResponse` to the `aliases` array in the same file.
