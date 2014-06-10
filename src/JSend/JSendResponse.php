@@ -14,17 +14,17 @@ class JSendResponse
 
     public static function success(array $data = null)
     {
-        return new self(self::SUCCESS, $data);
+        return new static(self::SUCCESS, $data);
     }
 
     public static function fail(array $data = null)
     {
-        return new self(self::FAIL, $data);
+        return new static(self::FAIL, $data);
     }
 
     public static function error($errorMessage, $errorCode = null, array $data = null)
     {
-        return new self(self::ERROR, $data, $errorMessage, $errorCode);
+        return new static(self::ERROR, $data, $errorMessage, $errorCode);
     }
 
     public function __construct($status, array $data = null, $errorMessage = null, $errorCode = null)
